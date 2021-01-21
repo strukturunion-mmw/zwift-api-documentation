@@ -1,5 +1,4 @@
-# zwift-api-documentation
-Unofficial documentation of the ZWIFT mobile API
+![cover image](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/coverimage.jpg)
 
 This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we have collected from existing projects and from our own observations, wacthing the Zwift website and companion app *in action*. It likely is by no means complete nor adorsed or supported by ZWIFT. No guarantees for any functionality are given as ZWIFT may change theit API at any time without notice.  
 
