@@ -1,0 +1,577 @@
+this is the file containing the rest apis:
+```java
+package com.zwift.android.networking;
+
+import com.zwift.android.domain.model.ActivityComment;
+import com.zwift.android.domain.model.ActivityNotes;
+import com.zwift.android.domain.model.ActivityRideOn;
+import com.zwift.android.domain.model.Announcement;
+import com.zwift.android.domain.model.BasePlayerProfile;
+import com.zwift.android.domain.model.Club;
+import com.zwift.android.domain.model.ClubAcceptApplicationRequest;
+import com.zwift.android.domain.model.ClubAcceptInviteRequest;
+import com.zwift.android.domain.model.ClubAnnouncement;
+import com.zwift.android.domain.model.ClubBanMemberRequest;
+import com.zwift.android.domain.model.ClubBatchInviteRequest;
+import com.zwift.android.domain.model.ClubChat;
+import com.zwift.android.domain.model.ClubComment;
+import com.zwift.android.domain.model.ClubDenyInviteRequest;
+import com.zwift.android.domain.model.ClubJoinRequest;
+import com.zwift.android.domain.model.ClubLeaveRequest;
+import com.zwift.android.domain.model.ClubList;
+import com.zwift.android.domain.model.ClubMemberList;
+import com.zwift.android.domain.model.ClubMemberStatus;
+import com.zwift.android.domain.model.ClubMembershipSecurityLevelRequest;
+import com.zwift.android.domain.model.ClubRejectApplicationRequest;
+import com.zwift.android.domain.model.ClubTOS;
+import com.zwift.android.domain.model.ClubWithdrawApplicationRequest;
+import com.zwift.android.domain.model.ClubWithdrawInviteRequest;
+import com.zwift.android.domain.model.ComboStats;
+import com.zwift.android.domain.model.CommentRequest;
+import com.zwift.android.domain.model.CreateMeetupResponse;
+import com.zwift.android.domain.model.Event;
+import com.zwift.android.domain.model.EventFeed;
+import com.zwift.android.domain.model.EventRegistrationResponse;
+import com.zwift.android.domain.model.FollowStatusEnvelope;
+import com.zwift.android.domain.model.FollowingRelationship;
+import com.zwift.android.domain.model.GameInfoJSON;
+import com.zwift.android.domain.model.GameInfoVersionJSON;
+import com.zwift.android.domain.model.Meetup;
+import com.zwift.android.domain.model.MeetupEntitlement;
+import com.zwift.android.domain.model.MeetupSummary;
+import com.zwift.android.domain.model.PartnerAuthorizeUrlResponse;
+import com.zwift.android.domain.model.PartnerConnectionEnvelope;
+import com.zwift.android.domain.model.PartnerConnectionOAuth1Envelope;
+import com.zwift.android.domain.model.PartnerCredentialsResponse;
+import com.zwift.android.domain.model.PartnerStatusResponse;
+import com.zwift.android.domain.model.PartnerUserInfo;
+import com.zwift.android.domain.model.PlayerIdWithClubMemberStatus;
+import com.zwift.android.domain.model.PlayerProfileImpl;
+import com.zwift.android.domain.model.PrivateEventSaveRequestDto;
+import com.zwift.android.domain.model.ProfileGoal;
+import com.zwift.android.domain.model.PublicCampaignResponse;
+import com.zwift.android.domain.model.RaceResultV2List;
+import com.zwift.android.domain.model.RelayServerUrlEnvelope;
+import com.zwift.android.domain.model.RideActivity;
+import com.zwift.android.domain.model.SearchProfileQuery;
+import com.zwift.android.domain.model.ServerEnvelope;
+import com.zwift.android.domain.model.SimpleRideActivity;
+import com.zwift.android.domain.model.SocialNotification;
+import com.zwift.android.domain.model.SocialNotificationInput;
+import com.zwift.android.domain.model.Sport;
+import com.zwift.android.domain.model.Statistics;
+import com.zwift.android.domain.model.UpdatablePlayerProfile;
+import com.zwift.android.domain.model.campaign.ProfileCampaignRegistration;
+import com.zwift.android.domain.model.campaign.ProfileCampaignsResponse;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import okhttp3.RequestBody;
+import p020rx.Observable;
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+
+public interface RestApi {
+    @Multipart
+    @POST(mo28470a = "profiles/{profileId}/photo")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Call<Void> mo20898a(@Path(mo28475a = "profileId") long j, @Part(mo28472a = "profileImage") RequestBody requestBody);
+
+    @GET(mo28461a = "servers")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<RelayServerUrlEnvelope> mo20899a();
+
+    @POST(mo28470a = "clubs/terms/{termsId}/accept")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20900a(@Path(mo28475a = "termsId") int i);
+
+    @GET(mo28461a = "clubs/club")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubList> mo20901a(@Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2);
+
+    @GET(mo28461a = "clubs/club/list/my-clubs")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubList> mo20902a(@Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2, @Query(mo28477a = "status") List<ClubMemberStatus> list);
+
+    @GET(mo28461a = "profiles/{profileId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<PlayerProfileImpl> mo20903a(@Path(mo28475a = "profileId") long j);
+
+    @GET(mo28461a = "activities/{activityId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<RideActivity> mo20904a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "rideOnTimesLimit") int i);
+
+    @GET(mo28461a = "profiles/{profileId}/followees")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<FollowingRelationship>> mo20905a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+
+    @GET(mo28461a = "profiles/{profileId}/followers")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<FollowingRelationship>> mo20906a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2, @Query(mo28477a = "include-follow-requests") boolean z);
+
+    @POST(mo28470a = "search/profiles")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<BasePlayerProfile>> mo20907a(@Query(mo28477a = "created_before") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2, @Query(mo28477a = "followers_only") boolean z, @Body SearchProfileQuery searchProfileQuery);
+
+    @DELETE(mo28457a = "profiles/{fromProfileId}/following/{toProfileId}")
+    /* renamed from: a */
+    Observable<Void> mo20908a(@Path(mo28475a = "fromProfileId") long j, @Path(mo28475a = "toProfileId") long j2);
+
+    @GET(mo28461a = "profiles/{profileId}/activities")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<RideActivity>> mo20909a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "before") long j2, @Query(mo28477a = "limit") int i);
+
+    @GET(mo28461a = "activities/{activityId}/comment")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<ActivityComment>> mo20910a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "created_before") long j2, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+
+    @GET(mo28461a = "profiles/{profileId}/activities/{activityId}/rideon")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ArrayList<ActivityRideOn>> mo20911a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Query(mo28477a = "created_before") long j3, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+
+    @PUT(mo28471a = "profiles/{profileId}/activities/{activityId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20912a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body ActivityNotes activityNotes);
+
+    @POST(mo28470a = "profiles/{profileId}/activities/{activityId}/rideon")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20913a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body ActivityRideOn activityRideOn);
+
+    @POST(mo28470a = "profiles/{fromProfileId}/following/{toProfileId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<FollowStatusEnvelope> mo20914a(@Path(mo28475a = "fromProfileId") long j, @Path(mo28475a = "toProfileId") long j2, @Body FollowingRelationship followingRelationship);
+
+    @PUT(mo28471a = "profiles/{profileId}/goals/{goalId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20915a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "goalId") long j2, @Body ProfileGoal profileGoal);
+
+    @PUT(mo28471a = "profiles/{profileId}/activities/{activityId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20916a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body SimpleRideActivity simpleRideActivity);
+
+    @POST(mo28470a = "activities/{activityId}/comment")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ActivityComment> mo20917a(@Path(mo28475a = "activityId") long j, @Body CommentRequest commentRequest);
+
+    @PUT(mo28471a = "private_event/{eventId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20918a(@Path(mo28475a = "eventId") long j, @Body PrivateEventSaveRequestDto privateEventSaveRequestDto);
+
+    @POST(mo28470a = "profiles/{profileId}/goals")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ProfileGoal> mo20919a(@Path(mo28475a = "profileId") long j, @Body ProfileGoal profileGoal);
+
+    @PUT(mo28471a = "notifications/{notificationId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20920a(@Path(mo28475a = "notificationId") long j, @Body SocialNotificationInput socialNotificationInput);
+
+    @GET(mo28461a = "profiles/{profileId}/statistics")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<Statistics> mo20921a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "sport") Sport sport, @Query(mo28477a = "startDateTime") String str);
+
+    @PUT(mo28471a = "profiles/me/{profileId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<PlayerProfileImpl> mo20922a(@Path(mo28475a = "profileId") long j, @Body UpdatablePlayerProfile updatablePlayerProfile);
+
+    @GET(mo28461a = "events/{id}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<Event> mo20923a(@Path(mo28475a = "id") long j, @Query(mo28477a = "eventSecret") String str);
+
+    @GET(mo28461a = "events/subgroups/entrants/{subgroupId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<BasePlayerProfile>> mo20924a(@Path(mo28475a = "subgroupId") long j, @Query(mo28477a = "participation") String str, @Query(mo28477a = "registered_before") long j2, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2, @Query(mo28477a = "type") String str2);
+
+    @POST(mo28470a = "events/subgroups/signup/{subgroupId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<EventRegistrationResponse> mo20925a(@Path(mo28475a = "subgroupId") long j, @Query(mo28477a = "eventSecret") String str, @Body String str2);
+
+    @POST(mo28470a = "profiles/{profileId}/privacy")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20926a(@Path(mo28475a = "profileId") long j, @Body Map map);
+
+    @GET(mo28461a = "activities/{activityId}/rideon")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ArrayList<ActivityRideOn>> mo20927a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "only_me") boolean z);
+
+    @GET(mo28461a = "profiles/{profileId}/activities/feed")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<RideActivity>> mo20928a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "includeSelf") boolean z, @Query(mo28477a = "includeFollowees") boolean z2, @Query(mo28477a = "includeFavorites") boolean z3, @Query(mo28477a = "includeInProgress") boolean z4, @Query(mo28477a = "fetchCampaign") boolean z5, @Query(mo28477a = "before") long j2, @Query(mo28477a = "limit") int i);
+
+    @POST(mo28470a = "clubs/membership/accept-request")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20929a(@Body ClubAcceptApplicationRequest clubAcceptApplicationRequest);
+
+    @POST(mo28470a = "clubs/membership/accept-invite")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20930a(@Body ClubAcceptInviteRequest clubAcceptInviteRequest);
+
+    @POST(mo28470a = "clubs/membership/ban")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20931a(@Body ClubBanMemberRequest clubBanMemberRequest);
+
+    @POST(mo28470a = "clubs/membership/batch-invite")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Response<Void>> mo20932a(@Body ClubBatchInviteRequest clubBatchInviteRequest);
+
+    @POST(mo28470a = "clubs/membership/reject-invite")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20933a(@Body ClubDenyInviteRequest clubDenyInviteRequest);
+
+    @POST(mo28470a = "clubs/membership/join")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Response<Void>> mo20934a(@Body ClubJoinRequest clubJoinRequest);
+
+    @POST(mo28470a = "clubs/membership/leave")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20935a(@Body ClubLeaveRequest clubLeaveRequest);
+
+    @POST(mo28470a = "clubs/membership/change-security-level")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20936a(@Body ClubMembershipSecurityLevelRequest clubMembershipSecurityLevelRequest);
+
+    @POST(mo28470a = "clubs/membership/reject-request")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20937a(@Body ClubRejectApplicationRequest clubRejectApplicationRequest);
+
+    @POST(mo28470a = "clubs/membership/cancel-request")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20938a(@Body ClubWithdrawApplicationRequest clubWithdrawApplicationRequest);
+
+    @POST(mo28470a = "clubs/membership/cancel-invite")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20939a(@Body ClubWithdrawInviteRequest clubWithdrawInviteRequest);
+
+    @POST(mo28470a = "private_event")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<CreateMeetupResponse> mo20940a(@Body PrivateEventSaveRequestDto privateEventSaveRequestDto);
+
+    @GET(mo28461a = "event-feed")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<EventFeed> mo20941a(@Query(mo28477a = "from") Long l, @Query(mo28477a = "to") Long l2, @Query(mo28477a = "limit") int i, @Query(mo28477a = "sport") List<Sport> list, @Query(mo28477a = "microservice") String str, @Query(mo28477a = "microserviceResourceId") String str2, @Query(mo28477a = "cursor") String str3);
+
+    @GET(mo28461a = "private_event/feed")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<MeetupSummary>> mo20942a(@Query(mo28477a = "start_date") Long l, @Query(mo28477a = "end_date") Long l2, @Query(mo28477a = "status") String str, @Query(mo28477a = "organizer_only_past_events") boolean z);
+
+    @GET(mo28461a = "profiles/{publicId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<PlayerProfileImpl> mo20943a(@Path(mo28475a = "publicId") String str);
+
+    @GET(mo28461a = "clubs/club/{clubId}/comment")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubChat> mo20944a(@Path(mo28475a = "clubId") String str, @Query(mo28477a = "created_before") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+
+    @POST(mo28470a = "partners/{partner}/search/profiles")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<BasePlayerProfile>> mo20945a(@Path(mo28475a = "partner") String str, @Query(mo28477a = "created_before") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2, @Body SearchProfileQuery searchProfileQuery);
+
+    @POST(mo28470a = "clubs/club/{clubId}/announcement")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubAnnouncement> mo20946a(@Path(mo28475a = "clubId") String str, @Body ClubAnnouncement clubAnnouncement);
+
+    @POST(mo28470a = "clubs/club/{clubId}/comment")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubComment> mo20947a(@Path(mo28475a = "clubId") String str, @Body CommentRequest commentRequest);
+
+    @POST(mo28470a = "partners/{partner}/auth")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20948a(@Path(mo28475a = "partner") String str, @Body PartnerConnectionEnvelope partnerConnectionEnvelope);
+
+    @POST(mo28470a = "partners/{partner}/oauth1/connect")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20949a(@Path(mo28475a = "partner") String str, @Body PartnerConnectionOAuth1Envelope partnerConnectionOAuth1Envelope);
+
+    @GET(mo28461a = "clubs/club/{clubId}/stats")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ComboStats> mo20950a(@Path(mo28475a = "clubId") String str, @Query(mo28477a = "daysOffset") Integer num);
+
+    @FormUrlEncoded
+    @POST(mo28470a = "users/password-reset/")
+    @Headers(mo28467a = {"Accept: application/json", "Content-type: application/x-www-form-urlencoded"})
+    /* renamed from: a */
+    Observable<Void> mo20951a(@Field(mo28458a = "password-new") String str, @Field(mo28458a = "password-confirm") String str2);
+
+    @PUT(mo28471a = "clubs/club/{clubId}/announcement/{announcementId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20952a(@Path(mo28475a = "clubId") String str, @Path(mo28475a = "announcementId") String str2, @Body ClubAnnouncement clubAnnouncement);
+
+    @POST(mo28470a = "push/fcm/{type}/{token}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20953a(@Path(mo28475a = "type") String str, @Path(mo28475a = "token") String str2, @Body Object obj);
+
+    @PUT(mo28471a = "push/fcm/{type}/{token}/enables")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: a */
+    Observable<Void> mo20954a(@Path(mo28475a = "type") String str, @Path(mo28475a = "token") String str2, @Body Map map);
+
+    @GET(mo28461a = "clubs/membership/{clubId}/status")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<PlayerIdWithClubMemberStatus>> mo20955a(@Path(mo28475a = "clubId") String str, @Query(mo28477a = "profileIds") List<Long> list);
+
+    @GET(mo28461a = "clubs/club/{id}/roster")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubMemberList> mo20956a(@Path(mo28475a = "id") String str, @Query(mo28477a = "status") List<ClubMemberStatus> list, @Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2);
+
+    @GET(mo28461a = "clubs/club/{id}/roster/find")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<ClubMemberList> mo20957a(@Path(mo28475a = "id") String str, @Query(mo28477a = "status") List<ClubMemberStatus> list, @Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2, @Query(mo28477a = "query") String str2, @Query(mo28477a = "sort") boolean z);
+
+    @GET(mo28461a = "activity-feed/feed/club/{clubId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: a */
+    Observable<List<RideActivity>> mo20958a(@Path(mo28475a = "clubId") String str, @Query(mo28477a = "includeSelf") boolean z, @Query(mo28477a = "includeFollowees") boolean z2, @Query(mo28477a = "includeFavorites") boolean z3, @Query(mo28477a = "start_after_activity_id") Long l, @Query(mo28477a = "limit") int i);
+
+    @GET(mo28461a = "profiles/me/")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<PlayerProfileImpl> mo20959b();
+
+    @GET(mo28461a = "clubs/club/list/my-clubs")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<ClubList> mo20960b(@Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2);
+
+    @GET(mo28461a = "events/subgroups/invited_ride_leaders/{subgroupId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<List<BasePlayerProfile>> mo20961b(@Path(mo28475a = "subgroupId") long j);
+
+    @GET(mo28461a = "race-results/entries")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<RaceResultV2List> mo20962b(@Query(mo28477a = "event_subgroup_id") long j, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+
+    @GET(mo28461a = "profiles/{loggedInProfileId}/followees-in-common/{profileId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<List<FollowingRelationship>> mo20963b(@Path(mo28475a = "loggedInProfileId") long j, @Path(mo28475a = "profileId") long j2);
+
+    @PUT(mo28471a = "profiles/{followeeId}/follower/{followerId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: b */
+    Observable<Void> mo20964b(@Path(mo28475a = "followeeId") long j, @Path(mo28475a = "followerId") long j2, @Body FollowingRelationship followingRelationship);
+
+    @GET(mo28461a = "partners/{partner}/auth")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: b */
+    Observable<PartnerStatusResponse> mo20965b(@Path(mo28475a = "partner") String str);
+
+    @DELETE(mo28457a = "clubs/club/{clubId}/comment/{commentId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: b */
+    Observable<Void> mo20966b(@Path(mo28475a = "clubId") String str, @Path(mo28475a = "commentId") String str2);
+
+    @GET(mo28461a = "notifications")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: c */
+    Observable<List<SocialNotification>> mo20967c();
+
+    @GET(mo28461a = "events/subgroups/invited_ride_sweepers/{subgroupId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: c */
+    Observable<List<BasePlayerProfile>> mo20968c(@Path(mo28475a = "subgroupId") long j);
+
+    @DELETE(mo28457a = "profiles/{profileId}/activities/{activityId}")
+    /* renamed from: c */
+    Observable<Void> mo20969c(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2);
+
+    @GET(mo28461a = "partners/{partner}/credentials")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: c */
+    Observable<List<PartnerCredentialsResponse>> mo20970c(@Path(mo28475a = "partner") String str);
+
+    @DELETE(mo28457a = "clubs/club/{clubId}/announcement/{announcementId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: c */
+    Observable<Void> mo20971c(@Path(mo28475a = "clubId") String str, @Path(mo28475a = "announcementId") String str2);
+
+    @GET(mo28461a = "announcements/active")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: d */
+    Observable<List<Announcement>> mo20972d();
+
+    @DELETE(mo28457a = "events/signup/{eventId}")
+    /* renamed from: d */
+    Observable<Void> mo20973d(@Path(mo28475a = "eventId") long j);
+
+    @DELETE(mo28457a = "profiles/{profileId}/goals/{goalId}")
+    /* renamed from: d */
+    Observable<Void> mo20974d(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "goalId") long j2);
+
+    /* renamed from: d */
+    Observable<PartnerCredentialsResponse> mo20975d(String str);
+
+    @GET(mo28461a = "server")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: e */
+    Observable<ServerEnvelope> mo20976e();
+
+    @GET(mo28461a = "profiles/{profileId}/goals")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: e */
+    Observable<List<ProfileGoal>> mo20977e(@Path(mo28475a = "profileId") long j);
+
+    @DELETE(mo28457a = "activities/{activityId}/comment/{commentId}")
+    /* renamed from: e */
+    Observable<Void> mo20978e(@Path(mo28475a = "activityId") long j, @Path(mo28475a = "commentId") long j2);
+
+    @GET(mo28461a = "partners/{partner}/oauth1/authorize_url_json")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: e */
+    Observable<PartnerAuthorizeUrlResponse> mo20979e(@Path(mo28475a = "partner") String str);
+
+    @GET(mo28461a = "game_info")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: f */
+    Observable<GameInfoJSON> mo20980f();
+
+    @DELETE(mo28457a = "private_event/{eventId}")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: f */
+    Observable<Void> mo20981f(@Path(mo28475a = "eventId") long j);
+
+    @DELETE(mo28457a = "partners/{partner}/auth")
+    /* renamed from: f */
+    Observable<Void> mo20982f(@Path(mo28475a = "partner") String str);
+
+    @GET(mo28461a = "game_info/version")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: g */
+    Observable<GameInfoVersionJSON> mo20983g();
+
+    @GET(mo28461a = "private_event/{eventId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: g */
+    Observable<Meetup> mo20984g(@Path(mo28475a = "eventId") long j);
+
+    @GET(mo28461a = "partners/{partner}/user")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: g */
+    Observable<PartnerUserInfo> mo20985g(@Path(mo28475a = "partner") String str);
+
+    @GET(mo28461a = "private_event/entitlement")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: h */
+    Observable<MeetupEntitlement> mo20986h();
+
+    @PUT(mo28471a = "private_event/{eventId}/accept")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: h */
+    Observable<Void> mo20987h(@Path(mo28475a = "eventId") long j);
+
+    @GET(mo28461a = "clubs/club/{clubId}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: h */
+    Observable<Club> mo20988h(@Path(mo28475a = "clubId") String str);
+
+    @POST(mo28470a = "support_portal/jwt")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: i */
+    Observable<String> mo20989i();
+
+    @PUT(mo28471a = "private_event/{eventId}/reject")
+    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    /* renamed from: i */
+    Observable<Void> mo20990i(@Path(mo28475a = "eventId") long j);
+
+    @GET(mo28461a = "clubs/club/find/short-name")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: i */
+    Observable<Club> mo20991i(@Query(mo28477a = "shortName") String str);
+
+    @GET(mo28461a = "campaign/profile/campaigns")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: j */
+    Observable<ProfileCampaignsResponse> mo20992j();
+
+    @GET(mo28461a = "clubs/club/{clubId}/announcements")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: j */
+    Observable<List<ClubAnnouncement>> mo20993j(@Path(mo28475a = "clubId") String str);
+
+    @GET(mo28461a = "clubs/terms/latest")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: k */
+    Observable<ClubTOS> mo20994k();
+
+    @GET(mo28461a = "campaign/profile/campaigns/shortName/{shortName}/registration/activities")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: k */
+    Observable<ProfileCampaignRegistration> mo20995k(@Path(mo28475a = "shortName") String str);
+
+    @GET(mo28461a = "campaign/public/campaigns/shortName/{shortName}")
+    @Headers(mo28467a = {"Accept: application/json"})
+    /* renamed from: l */
+    Observable<PublicCampaignResponse> mo20996l(@Path(mo28475a = "shortName") String str);
+}
+
+```
