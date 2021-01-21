@@ -42,14 +42,14 @@ A rideOn record, once set/given looks like this, See get_rideOn for information 
 
 ```json
 {
-  "‘profileId’": "integer id of the currently authenticated user giving the rideOn"
+  "profileId": "integer id of the currently authenticated user giving the rideOn"
 }
 ```
 
 **Data example**
 
 ```json
-{‘profileId’: 1234}
+{ "profileId": 1234 }
 ```
 
 ## Success Response
