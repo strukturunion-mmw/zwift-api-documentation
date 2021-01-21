@@ -14,3 +14,5 @@ Special thanks go out to the following projects for the groundwork laid:
 Ride on!
 
 # Known endpoints
+
+- [Template](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/template.md) for endpoint documentation
