@@ -2,6 +2,8 @@ This allows an authenticated user to give another rider a **rideOn**
 
 A rideOn record, once set/given looks like this, See get_rideOn for information on how to get a rideOn record.
 
+**rideOn record example**
+
 ```json
 {
   "activityId": 123,
