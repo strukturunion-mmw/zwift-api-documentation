@@ -25,7 +25,7 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
 **Code** : `200 OK`
 
 **response**
-A json object containig all RideOns 
+A json object containing all RideOns 
 
 ```json
 {}
