@@ -1,6 +1,51 @@
-This allows an authenticated user to give another rider a **rideOn**
+# Give RideOn
 
-A rideOn record, once set/given looks like this, See get_rideOn for information on how to get a rideOn record.
+This allows an authenticated user to give another rider a **rideOn** for a current or completed activity.
+
+**Base URL** : 'https://us-or-rly101.zwift.com'
+
+**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon`
+
+**Method** : `POST`
+
+**Auth required** : True
+
+**Required POST URL contained parameters**
+
+```
+  "riderId": "integer id of the rider receiving the RideOn"
+
+  "activityId": "integer id of the activity for the RideOn given"
+```
+
+**Required POST request payload**
+
+```json
+{
+  "profileId": "integer id of the currently authenticated user giving the rideOn"
+}
+```
+
+**Payload example**
+
+```json
+{ "profileId": 1234 }
+```
+
+## Success Response
+
+**Code** : `200 OK`
+
+**response**
+An empty json object
+
+```json
+{}
+```
+
+## Additional information
+
+A rideOn record, once set/given looks like this, See [Read RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/read_rideOn.md) for information on how to retrieve a rideOn record.
 
 **rideOn record example**
 
@@ -32,33 +77,7 @@ A rideOn record, once set/given looks like this, See get_rideOn for information 
 }
 ```
 
-**URL** : `api/profiles/{profileId}/activities/{activityId}/rideon`
+## See also
 
-**Method** : `POST`
-
-**Auth required** : True
-
-**Data constraints**
-
-```json
-{
-  "profileId": "integer id of the currently authenticated user giving the rideOn"
-}
-```
-
-**Data example**
-
-```json
-{ "profileId": 1234 }
-```
-
-## Success Response
-
-**Code** : `200 OK`
-
-**response**
-An empty json
-
-```json
-{}
-```
+- [Read RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/read_rideOn.md) Read RideOn Information of a specific RideOn
+- [List RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/list_rideOns.md) List all RideOns for a rider on an activity
