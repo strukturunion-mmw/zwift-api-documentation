@@ -1,35 +1,19 @@
-# Give RideOn
+# Read RideOn
 
-This allows an authenticated user to give another rider a **rideOn** for a current or completed activity.
+This allows an authenticated user to retrieve information on her/his **given** RideOn on a specific activity
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon`
-
-**Method** : `POST`
+**Endpoint** : `api/activities/{activityId}/rideon`
+ 
+**Method** : `GET`
 
 **Auth required** : True
 
-**Required POST URL contained parameters**
+**Required GET URL contained parameters**
 
 ```
-  "riderId": "integer id of the rider receiving the RideOn"
-
-  "activityId": "integer id of the activity for the RideOn given"
-```
-
-**Required POST request payload**
-
-```json
-{
-  "profileId": "integer id of the currently authenticated user giving the rideOn"
-}
-```
-
-**Payload example**
-
-```json
-{ "profileId": 1234 }
+  "activityId": "integer id of the activity for which the RideOn was given"
 ```
 
 ## Success Response
@@ -37,17 +21,7 @@ This allows an authenticated user to give another rider a **rideOn** for a curre
 **Code** : `200 OK`
 
 **response**
-An empty json object
-
-```json
-{}
-```
-
-## Additional information
-
-A rideOn record, once set/given looks like this, See [Read RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/read_rideOn.md) for information on how to retrieve a rideOn record.
-
-**rideOn record example**
+A json object containing the information on the RideOn
 
 ```json
 {

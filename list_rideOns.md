@@ -4,13 +4,15 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
 
 ## Endpoint request parameters
 
-**URL** : `api/profiles/{riderId}/activities/{activityId}/rideon`
+**Base URL** : 'https://us-or-rly101.zwift.com'
+
+**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon`
 
 **Method** : `GET`
 
 **Auth required** : True
 
-**Required POST URL contained parameters**
+**Required GET URL contained parameters**
 
 ```
   "riderId": "integer id of the rider receiving the RideOn"
@@ -23,10 +25,13 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
 **Code** : `200 OK`
 
 **response**
-A Json object containig all RideOns 
+A json object containig all RideOns 
 
 ```json
 {}
 ```
 
+## See also
+
+- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/endpoints_rideOns.md) RideOn related endpoints
 
