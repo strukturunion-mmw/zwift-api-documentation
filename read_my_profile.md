@@ -20,3 +20,7 @@ A json object containing the rider's profile information
 ```json
 {}
 ```
+
+## See also
+
+- [Rider Profiles](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/endpoints_riderProfiles.md) Rider Profile related endpoints

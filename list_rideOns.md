@@ -6,7 +6,7 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon`
+**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon/?created_before={created_before}&start={start}&limit={limit}`
 
 **Method** : `GET`
 
@@ -18,6 +18,16 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
   "riderId": "integer id of the rider receiving the RideOn"
 
   "activityId": "integer id of the activity for the RideOn given"
+```
+
+**Optional GET URL contained parameters**
+
+```
+  "created_before": "timestamp up until rideOns were given" / default: now
+
+  "start": "Number of records to skip before starting output / default: 0
+  
+  "limit": "Number of records to return" / default (max): 20
 ```
 
 ## Success Response

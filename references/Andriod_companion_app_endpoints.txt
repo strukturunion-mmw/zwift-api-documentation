@@ -110,10 +110,11 @@ public interface RestApi {
     /* renamed from: a */
     Observable<ClubList> mo20902a(@Query(mo28477a = "limit") int i, @Query(mo28477a = "start") int i2, @Query(mo28477a = "status") List<ClubMemberStatus> list);
 
-    @GET(mo28461a = "profiles/{profileId}")
-    @Headers(mo28467a = {"Accept: application/json"})
-    /* renamed from: a */
-    Observable<PlayerProfileImpl> mo20903a(@Path(mo28475a = "profileId") long j);
+    # See "Retrieve any rider profile" in documentation  
+    # @GET(mo28461a = "profiles/{profileId}")
+    # @Headers(mo28467a = {"Accept: application/json"})
+    # /* renamed from: a */
+    # Observable<PlayerProfileImpl> mo20903a(@Path(mo28475a = "profileId") long j);
 
     @GET(mo28461a = "activities/{activityId}")
     @Headers(mo28467a = {"Accept: application/json"})
@@ -149,20 +150,23 @@ public interface RestApi {
     /* renamed from: a */
     Observable<List<ActivityComment>> mo20910a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "created_before") long j2, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
 
-    @GET(mo28461a = "profiles/{profileId}/activities/{activityId}/rideon")
-    @Headers(mo28467a = {"Accept: application/json"})
-    /* renamed from: a */
-    Observable<ArrayList<ActivityRideOn>> mo20911a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Query(mo28477a = "created_before") long j3, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
+    # See "List RideOns" in documentation  
+    #  @GET(mo28461a = "profiles/{profileId}/activities/{activityId}/rideon")
+    #  @Headers(mo28467a = {"Accept: application/json"})
+    #  /* renamed from: a */
+    #  Observable<ArrayList<ActivityRideOn>> mo20911a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, 
+    #  @Query(mo28477a = "created_before") long j3, @Query(mo28477a = "start") int i, @Query(mo28477a = "limit") int i2);
 
     @PUT(mo28471a = "profiles/{profileId}/activities/{activityId}")
     @Headers(mo28467a = {"Accept: application/json"})
     /* renamed from: a */
     Observable<Void> mo20912a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body ActivityNotes activityNotes);
 
-    @POST(mo28470a = "profiles/{profileId}/activities/{activityId}/rideon")
-    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
-    /* renamed from: a */
-    Observable<Void> mo20913a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body ActivityRideOn activityRideOn);
+    # See "Give RideOn" in documentation  
+    #  @POST(mo28470a = "profiles/{profileId}/activities/{activityId}/rideon")
+    #  @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    #  /* renamed from: a */
+    #  Observable<Void> mo20913a(@Path(mo28475a = "profileId") long j, @Path(mo28475a = "activityId") long j2, @Body ActivityRideOn activityRideOn);
 
     @POST(mo28470a = "profiles/{fromProfileId}/following/{toProfileId}")
     @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
@@ -204,10 +208,11 @@ public interface RestApi {
     /* renamed from: a */
     Observable<Statistics> mo20921a(@Path(mo28475a = "profileId") long j, @Query(mo28477a = "sport") Sport sport, @Query(mo28477a = "startDateTime") String str);
 
-    @PUT(mo28471a = "profiles/me/{profileId}")
-    @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
-    /* renamed from: a */
-    Observable<PlayerProfileImpl> mo20922a(@Path(mo28475a = "profileId") long j, @Body UpdatablePlayerProfile updatablePlayerProfile);
+    # See "Retrieve Rider Profile" in documentation  
+    #  @PUT(mo28471a = "profiles/me/{profileId}")
+    #  @Headers(mo28467a = {"Content-Type: application/json", "Accept: application/json"})
+    #  /* renamed from: a */
+    #  Observable<PlayerProfileImpl> mo20922a(@Path(mo28475a = "profileId") long j, @Body UpdatablePlayerProfile updatablePlayerProfile);
 
     @GET(mo28461a = "events/{id}")
     @Headers(mo28467a = {"Accept: application/json"})
@@ -229,10 +234,11 @@ public interface RestApi {
     /* renamed from: a */
     Observable<Void> mo20926a(@Path(mo28475a = "profileId") long j, @Body Map map);
 
-    @GET(mo28461a = "activities/{activityId}/rideon")
-    @Headers(mo28467a = {"Accept: application/json"})
-    /* renamed from: a */
-    Observable<ArrayList<ActivityRideOn>> mo20927a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "only_me") boolean z);
+    # See "Read RideOn" in documentation  
+    #  @GET(mo28461a = "activities/{activityId}/rideon")
+    #  @Headers(mo28467a = {"Accept: application/json"})
+    #  /* renamed from: a */
+    #  Observable<ArrayList<ActivityRideOn>> mo20927a(@Path(mo28475a = "activityId") long j, @Query(mo28477a = "only_me") boolean z);
 
     @GET(mo28461a = "profiles/{profileId}/activities/feed")
     @Headers(mo28467a = {"Accept: application/json"})
@@ -309,10 +315,11 @@ public interface RestApi {
     /* renamed from: a */
     Observable<List<MeetupSummary>> mo20942a(@Query(mo28477a = "start_date") Long l, @Query(mo28477a = "end_date") Long l2, @Query(mo28477a = "status") String str, @Query(mo28477a = "organizer_only_past_events") boolean z);
 
-    @GET(mo28461a = "profiles/{publicId}")
-    @Headers(mo28467a = {"Accept: application/json"})
-    /* renamed from: a */
-    Observable<PlayerProfileImpl> mo20943a(@Path(mo28475a = "publicId") String str);
+    # See "Retrieve any rider profile" in documentation  
+    #  @GET(mo28461a = "profiles/{publicId}")
+    #  @Headers(mo28467a = {"Accept: application/json"})
+    #  /* renamed from: a */
+    #  Observable<PlayerProfileImpl> mo20943a(@Path(mo28475a = "publicId") String str);
 
     @GET(mo28461a = "clubs/club/{clubId}/comment")
     @Headers(mo28467a = {"Accept: application/json"})
@@ -390,10 +397,11 @@ public interface RestApi {
     /* renamed from: a */
     Observable<List<RideActivity>> mo20958a(@Path(mo28475a = "clubId") String str, @Query(mo28477a = "includeSelf") boolean z, @Query(mo28477a = "includeFollowees") boolean z2, @Query(mo28477a = "includeFavorites") boolean z3, @Query(mo28477a = "start_after_activity_id") Long l, @Query(mo28477a = "limit") int i);
 
-    @GET(mo28461a = "profiles/me/")
-    @Headers(mo28467a = {"Accept: application/json"})
-    /* renamed from: b */
-    Observable<PlayerProfileImpl> mo20959b();
+    # See "Retrieve my rider profile" in documentation  
+    #  @GET(mo28461a = "profiles/me/")
+    #  #  @Headers(mo28467a = {"Accept: application/json"})
+    #  /* renamed from: b */
+    #  Observable<PlayerProfileImpl> mo20959b();
 
     @GET(mo28461a = "clubs/club/list/my-clubs")
     @Headers(mo28467a = {"Accept: application/json"})
