@@ -79,6 +79,6 @@ A rideOn record, once set/given looks like this, See [Read RideOn](https://githu
 
 ## See also
 
-- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/endpoints_rideOns.md#rideons) RideOn related endpoints
+- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#rideons) RideOn related endpoints
 
 - [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints

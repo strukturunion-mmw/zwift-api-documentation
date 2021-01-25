@@ -23,6 +23,6 @@ A json object containing the rider's profile information
 
 ## See also
 
-- [Rider Profiles](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/riderProfiles/endpoints_riderProfiles.md#rider-profiles) Rider Profile related endpoints
+- [Rider Profiles](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#rider-profiles) Rider Profile related endpoints
 
 - [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints

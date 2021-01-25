@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="99454131-24aa-4b6f-888d-96cd56069e27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activities/endpoints_activities.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rideOns/endpoints_rideOns.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rideOns/give_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/give_rideOn.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rideOns/list_rideOns.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/list_rideOns.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rideOns/read_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/read_rideOn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riderProfiles/endpoints_riderProfiles.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worlds/endpoints_worlds.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611556414968</updated>
       <workItem from="1611556417656" duration="804000" />
-      <workItem from="1611557325454" duration="221000" />
+      <workItem from="1611557325454" duration="302000" />
+      <workItem from="1611557815572" duration="67000" />
     </task>
     <servers />
   </component>
