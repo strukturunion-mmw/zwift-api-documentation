@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99454131-24aa-4b6f-888d-96cd56069e27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints_rideOns.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints_riderProfiles.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/give_rideOn.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_rideOns.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_my_profile.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_rideOn.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_rider_profile.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities/endpoints_activities.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rideOns/endpoints_rideOns.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rideOns/give_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/give_rideOn.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rideOns/list_rideOns.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/list_rideOns.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rideOns/read_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/read_rideOn.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riderProfiles/endpoints_riderProfiles.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worlds/endpoints_worlds.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -42,7 +45,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611556414968</updated>
-      <workItem from="1611556417656" duration="758000" />
+      <workItem from="1611556417656" duration="804000" />
+      <workItem from="1611557325454" duration="221000" />
     </task>
     <servers />
   </component>

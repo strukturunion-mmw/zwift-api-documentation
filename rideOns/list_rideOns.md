@@ -43,6 +43,6 @@ A json object containing all RideOns
 
 ## See also
 
-- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/endpoints_rideOns.md) RideOn related endpoints
+- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/endpoints_rideOns.md#rideons) RideOn related endpoints
 
-- [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md) Overview of all documented API endpoints
+- [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints
