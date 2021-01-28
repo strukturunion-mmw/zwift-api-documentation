@@ -45,7 +45,7 @@ An empty json object
 
 ## Additional information
 
-A rideOn record, once set/given looks like this, See [Read RideOn](/read_rideOn.md) for information on how to retrieve a rideOn record.
+A rideOn record, once set/given looks like this, See [Read RideOn](/read_rideOns.md) for information on how to retrieve a rideOn record.
 
 **rideOn record example**
 

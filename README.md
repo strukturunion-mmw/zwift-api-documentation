@@ -30,11 +30,13 @@ feedback from ZWIFT.
 ## Rider Profiles
 - [Retrieve own rider profile](/riderProfiles/read_my_profile.md) Retrieve own rider profile of authenticated user
 - [Retrieve any rider profile](/riderProfiles/read_rider_profile.md) Retrieve profile of a specific rider
+- [List any riders followers](/riderProfiles/list_folowers.md) List all riders that follow a specific rider
+- [List any riders followees](/riderProfiles/list_followees.md) List all riders being followed by a specific rider
 - *currently working on commpleting this part of the documentation*
 
 ## RideOns
 - [Give RideOn](/rideOns/give_rideOn.md) Give RideOn to another rider's activity (current or past)
-- [Read RideOn](/rideOns/read_rideOn.md) Read RideOn Information of a specific RideOn
+- [Read RideOns](/rideOns/read_rideOns.md) Read RideOn Information of a specific RideOn
 - [List RideOns](/rideOns/list_rideOns.md) List all RideOns for a rider on an activity
 - *currently working on commpleting this part of the documentation*
 
