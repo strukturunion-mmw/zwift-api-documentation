@@ -4,7 +4,8 @@ This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we h
 
 Please SHARE your insights on the API with us, so the documentation can be completed over time.  
 
-To test API calls and for qquick troubleshooting you may want to check out the following
+## Instant Testing
+To test API calls and for qquick troubleshooting you may want to check out the <br>
 [Online ZWIFT API Test](https://zwiftapi.strukturunion.de)
 
 Special thanks go out to the following projects for the groundwork laid:  
