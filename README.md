@@ -12,9 +12,10 @@ Special thanks go out to the following projects for the groundwork laid:
 
 Ride on!
 
-## Instant Testing
-To test API calls and for qquick troubleshooting you may want to check out the <br>
-[Online ZWIFT API Test](https://zwiftapi.strukturunion.de)
+# Instant Testing
+To test API calls with instant feedback and for quick troubleshooting you may want to check out the <br>
+[Online ZWIFT API Test](https://zwiftapi.strukturunion.de) WebApp, which allows you to use your own<br>
+credentials for live feedback from ZWIFT.
 
 
 # Known endpoints
