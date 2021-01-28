@@ -38,10 +38,9 @@ feedback from ZWIFT.
 - [Give RideOn](/rideOns/give_rideOn.md) Give RideOn to another rider's activity (current or past)
 - [Read RideOns](/rideOns/read_rideOns.md) Read RideOn Information of a specific RideOn
 - [List RideOns](/rideOns/list_rideOns.md) List all RideOns for a rider on an activity
-- *currently working on commpleting this part of the documentation*
 
 ## Activities
-- *currently working on this part of the documentation*
+- *planned to work on this part of the documentation*
 
 ## Worlds
-- *currently working on this part of the documentation*
+- *planned to work on this part of the documentation*

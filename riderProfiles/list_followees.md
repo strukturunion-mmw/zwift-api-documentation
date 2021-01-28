@@ -1,4 +1,4 @@
-# List any riders followees
+# List any rider's followees
 
 This allows an authenticated user to list all riders being followed by a specific rider
 
