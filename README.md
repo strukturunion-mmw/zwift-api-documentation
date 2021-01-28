@@ -1,6 +1,13 @@
 ![cover image](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/coverimage.jpg)
 
-This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we have collected from existing projects and from our own observations, watching the ZWIFT website and companion app *in action*. It likely is by no means complete nor adorsed or supported by ZWIFT. No guarantees for any functionality are given as ZWIFT may change it's API at any time without notice.  
+This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we have collected from existing projects and 
+from our own observations, watching the ZWIFT website and companion app *in action*. It likely is by no means complete 
+nor adorsed or supported by ZWIFT. No guarantees for any functionality are given as ZWIFT may change it's API at any 
+time without notice.  
+
+Note that this is not a "ready-to-use" code in a specific language, but it is a mere helper, allowing to easier implement 
+API calls to ZWIFT in your own application. It is meant to serve as a reference for general working concepts as well as 
+for lookup of parameters, call specifics etc. 
 
 Please SHARE your insights on the API with us, so the documentation can be completed over time.  
 
@@ -14,15 +21,15 @@ Ride on!
 
 # Instant Testing
 To test API calls with instant feedback and for quick troubleshooting you may want to check out the <br>
-[Online ZWIFT API Test](https://zwiftapi.strukturunion.de) WebApp, which allows you to use your own<br>
-credentials for live feedback from ZWIFT.
+[ZWIFT API Test WebApp](https://zwiftapi.strukturunion.de), which allows you to use your own credentials for live 
+feedback from ZWIFT.
 
 
 # Known endpoints
 
 ## Rider Profiles
-- [Retrieve own rider profile](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/riderProfiles/read_my_profile.md) Retrieve own rider profile of authenticated user
-- [Retrieve any rider profile](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/riderProfiles/read_rider_profile.md) Retrieve profile of a specific rider
+- [Retrieve own rider profile](/riderProfiles/read_my_profile.md) Retrieve own rider profile of authenticated user
+- [Retrieve any rider profile](/riderProfiles/read_rider_profile.md) Retrieve profile of a specific rider
 - *currently working on commpleting this part of the documentation*
 
 ## RideOns
