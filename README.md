@@ -4,10 +4,6 @@ This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we h
 
 Please SHARE your insights on the API with us, so the documentation can be completed over time.  
 
-## Instant Testing
-To test API calls and for qquick troubleshooting you may want to check out the <br>
-[Online ZWIFT API Test](https://zwiftapi.strukturunion.de)
-
 Special thanks go out to the following projects for the groundwork laid:  
 - [Ogadai/zwift-mobile-api](https://github.com/Ogadai/zwift-mobile-api)
 - [darenc/zwift-php](https://github.com/darenc/zwift-php)
@@ -15,6 +11,11 @@ Special thanks go out to the following projects for the groundwork laid:
 - [zwift-client](https://pypi.org/project/zwift-client/)
 
 Ride on!
+
+## Instant Testing
+To test API calls and for qquick troubleshooting you may want to check out the <br>
+[Online ZWIFT API Test](https://zwiftapi.strukturunion.de)
+
 
 # Known endpoints
 
