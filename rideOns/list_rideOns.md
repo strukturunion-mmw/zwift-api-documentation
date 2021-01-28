@@ -45,6 +45,6 @@ A json object containing all RideOns
 
 - [ZWIFT API Test WebApp](https://zwiftapi.strukturunion.de) Test the API with instant feedback
 
-- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#rideons) RideOn related endpoints
+- [RideOns](../README.md#rideons) RideOn related endpoints
 
-- [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints
+- [Endpoints overview](../README.md#known-endpoints) Overview of all documented API endpoints

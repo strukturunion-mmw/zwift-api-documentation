@@ -45,7 +45,7 @@ An empty json object
 
 ## Additional information
 
-A rideOn record, once set/given looks like this, See [Read RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/read_rideOn.md) for information on how to retrieve a rideOn record.
+A rideOn record, once set/given looks like this, See [Read RideOn](/read_rideOn.md) for information on how to retrieve a rideOn record.
 
 **rideOn record example**
 
@@ -81,6 +81,6 @@ A rideOn record, once set/given looks like this, See [Read RideOn](https://githu
 
 - [ZWIFT API Test WebApp](https://zwiftapi.strukturunion.de) Test the API with instant feedback
 
-- [RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#rideons) RideOn related endpoints
+- [RideOns](../README.md#rideons) RideOn related endpoints
 
-- [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints
+- [Endpoints overview](../README.md#known-endpoints) Overview of all documented API endpoints

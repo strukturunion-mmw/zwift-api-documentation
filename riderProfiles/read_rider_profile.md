@@ -31,6 +31,6 @@ A json object containing the rider's public profile information
 
 - [ZWIFT API Test WebApp](https://zwiftapi.strukturunion.de) Test the API with instant feedback
 
-- [Rider Profiles](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#rider-profiles) Rider Profile related endpoints
+- [Rider Profiles](../README.md#rider-profiles) Rider Profile related endpoints
 
-- [Endpoints overview](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/README.md#known-endpoints) Overview of all documented API endpoints
+- [Endpoints overview](../README.md#known-endpoints) Overview of all documented API endpoints

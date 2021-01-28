@@ -1,4 +1,4 @@
-![cover image](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/coverimage.jpg)
+![cover image](/coverimage.jpg)
 
 This UNOFFICIAL documentation of the ZWIFT mobile API is the result of what we have collected from existing projects and 
 from our own observations, watching the ZWIFT website and companion app *in action*. It likely is by no means complete 
@@ -33,9 +33,9 @@ feedback from ZWIFT.
 - *currently working on commpleting this part of the documentation*
 
 ## RideOns
-- [Give RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/give_rideOn.md) Give RideOn to another rider's activity (current or past)
-- [Read RideOn](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/read_rideOn.md) Read RideOn Information of a specific RideOn
-- [List RideOns](https://github.com/strukturunion-mmw/zwift-api-documentation/blob/main/rideOns/list_rideOns.md) List all RideOns for a rider on an activity
+- [Give RideOn](/rideOns/give_rideOn.md) Give RideOn to another rider's activity (current or past)
+- [Read RideOn](/rideOns/read_rideOn.md) Read RideOn Information of a specific RideOn
+- [List RideOns](/rideOns/list_rideOns.md) List all RideOns for a rider on an activity
 - *currently working on commpleting this part of the documentation*
 
 ## Activities
