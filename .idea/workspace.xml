@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99454131-24aa-4b6f-888d-96cd56069e27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/worlds/show_riders_in_watopia.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worlds/show_watopia_stats.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rideOns/give_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/give_rideOn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rideOns/list_rideOns.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/list_rideOns.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rideOns/read_rideOn.md" beforeDir="false" afterPath="$PROJECT_DIR$/rideOns/read_rideOn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_my_profile.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/riderProfiles/read_rider_profile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nY9ybh8vSP6mQSYLzoTUXP9wi4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,7 +31,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210129_0001" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/worlds" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/worlds" />
+      <recent name="$PROJECT_DIR$/riderProfiles" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -44,10 +58,27 @@
       <workItem from="1611556417656" duration="804000" />
       <workItem from="1611557325454" duration="302000" />
       <workItem from="1611557815572" duration="67000" />
+      <workItem from="1611849875170" duration="88000" />
+      <workItem from="1611850037660" duration="3841000" />
+      <workItem from="1611922233713" duration="1440000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1371" y="429" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611849898183">
+      <screen x="0" y="23" width="3440" height="1376" />
+    </state>
+    <state x="1371" y="429" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/3440.243.1680.1027/0.23.3440.1376@0.23.3440.1376" timestamp="1611849898183" />
+    <state x="1496" y="607" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611922249525">
+      <screen x="0" y="23" width="3440" height="1376" />
+    </state>
+    <state x="1496" y="607" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3440.243.1680.1027/0.23.3440.1376@0.23.3440.1376" timestamp="1611922249525" />
+    <state x="1391" y="396" width="584" height="580" key="find.popup" timestamp="1611851380182">
+      <screen x="0" y="23" width="3440" height="1376" />
+    </state>
+    <state x="1391" y="396" width="584" height="580" key="find.popup/3440.243.1680.1027/0.23.3440.1376@0.23.3440.1376" timestamp="1611851380182" />
   </component>
 </project>

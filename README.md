@@ -43,4 +43,6 @@ feedback from ZWIFT.
 - *planned to work on this part of the documentation*
 
 ## Worlds
-- *planned to work on this part of the documentation*
+- [Show Watopia Stats](/worlds/show_watopia_stats.md) Show current stats on Watopia public world
+- [List all Riders in Watopia](/worlds/show_riders_in_watopia.md) Show all current riders in Watopia public world 
+- *currently working on commpleting this part of the documentation*
