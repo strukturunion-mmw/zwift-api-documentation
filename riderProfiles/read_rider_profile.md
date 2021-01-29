@@ -4,7 +4,7 @@ This allows an authenticated user to retrieve the public profile information of 
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}`
+**Endpoint** : `/api/profiles/{riderId}`
 
 **Method** : `GET`
 

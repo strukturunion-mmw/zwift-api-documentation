@@ -4,7 +4,7 @@ This allows an authenticated user to give another rider a **rideOn** for a curre
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon`
+**Endpoint** : `/api/profiles/{riderId}/activities/{activityId}/rideon`
 
 **Method** : `POST`
 
@@ -45,7 +45,7 @@ An empty json object
 
 ## Additional information
 
-A rideOn record, once set/given looks like this, See [Read RideOn](/read_rideOns.md) for information on how to retrieve a rideOn record.
+A rideOn record, once set/given looks like this, See [Read RideOn](/rideOns/read_rideOns.md) for information on how to retrieve a rideOn record.
 
 **rideOn record example**
 
@@ -69,7 +69,7 @@ A rideOn record, once set/given looks like this, See [Read RideOn](/read_rideOns
     "publicId": "15cc4997-7ee2-450b-a8f1-123",
     "socialFacts": {
       "followerStatusOfLoggedInPlayer": "NO_RELATIONSHIP",
-      "isFavoriteOfLoggedInPlayer": False
+      "isFavoriteOfLoggedInPlayer": false
     }
   },
   "profileId": 123,

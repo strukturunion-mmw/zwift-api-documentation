@@ -15,7 +15,7 @@ This allows an authenticated user to show current stats on Watopia public world,
 **Code** : `200 OK`
 
 **response**
-A json object containing the rider's profile information
+A json object containing the current Watopia Stats
 
 ```json
 {

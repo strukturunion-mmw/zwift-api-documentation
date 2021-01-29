@@ -4,7 +4,7 @@ This allows an authenticated user to retrieve her/his **own** profile informatio
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/me`
+**Endpoint** : `/api/profiles/me`
 
 **Method** : `GET`
 
@@ -15,7 +15,7 @@ This allows an authenticated user to retrieve her/his **own** profile informatio
 **Code** : `200 OK`
 
 **response**
-A json object containing the rider's profile information
+A json object containing the authenticated user's profile information
 
 ```json
 {

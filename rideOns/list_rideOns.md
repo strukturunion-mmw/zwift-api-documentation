@@ -6,7 +6,7 @@ This allows an authenticated user to retrieve a list of all RideOns given to a s
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}/activities/{activityId}/rideon/?created_before={created_before}&start={start}&limit={limit}`
+**Endpoint** : `/api/profiles/{riderId}/activities/{activityId}/rideon/?created_before={created_before}&start={start}&limit={limit}`
 
 **Method** : `GET`
 

@@ -9,7 +9,7 @@ stats, their sub-word (map) etc.
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `relay/worlds/1`
+**Endpoint** : `/relay/worlds/1`
 
 **Method** : `GET`
 

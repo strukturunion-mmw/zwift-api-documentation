@@ -4,7 +4,7 @@ This allows an authenticated user to list all riders that follow a specific ride
 
 **Base URL** : 'https://us-or-rly101.zwift.com'
 
-**Endpoint** : `api/profiles/{riderId}/followers`
+**Endpoint** : `/api/profiles/{riderId}/followers`
 
 **Method** : `GET`
 
